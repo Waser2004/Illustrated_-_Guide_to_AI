@@ -16,6 +16,13 @@ This repository contains code implementations and exercise solutions accompanyin
 	- `checkpoint.pt` - trained weights used for the loss-surface exploration.
 	- `loss_surface.png` - generated contour visualization.
 
+- [Chapter 3 - Backpropagation](Chapter%203%20-%20Backpropagation)
+	- `README.md` - chapter overview and run instructions for both examples.
+	- `linear model/main.py` - manual gradient updates for a tiny linear regression setup.
+	- `city predictor/main.py` - training loop for a simple city classifier.
+	- `city predictor/models.py` - naive and NumPy-based model implementations.
+	- `city predictor/dataset.json` - tiny labeled dataset (Paris vs Berlin coordinates).
+
 ## Note on Chapter 2 Model Origin
 
 The Chapter 2 model is intentionally reused from a separate CNN project that predicts how much of a cube is visible in an image (a regression target in the range [0, 1]).
