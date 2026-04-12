@@ -23,6 +23,12 @@ This repository contains code implementations and exercise solutions accompanyin
 	- `city predictor/models.py` - naive and NumPy-based model implementations.
 	- `city predictor/dataset.json` - tiny labeled dataset (Paris vs Berlin coordinates).
 
+- [Chapter 4 - Deep Learning](Chapter%204%20-%20Deep%20Learning)
+	- `README.md` - chapter overview, dependencies, and run instructions for the notebook.
+	- `100_neuron_challenge.ipynb` - full challenge workflow: data extraction, architecture search, training, and decision-boundary visualization.
+	- `checkpoint.pt` - trained model parameters used to reproduce the final visualization.
+	- `data/` - source map image assets used to generate coordinate labels.
+
 ## Note on Chapter 2 Model Origin
 
 The Chapter 2 model is intentionally reused from a separate CNN project that predicts how much of a cube is visible in an image (a regression target in the range [0, 1]).
