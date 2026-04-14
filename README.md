@@ -29,9 +29,20 @@ This repository contains code implementations and exercise solutions accompanyin
 	- `checkpoint.pt` - trained model parameters used to reproduce the final visualization.
 	- `data/` - source map image assets used to generate coordinate labels.
 
-## Note on Chapter 2 Model Origin
+- [Chapter 5 - AlexNet](Chapter%206%20-%20AlexNet)
+	- `feature_visualisation.py` - visualizes first-layer AlexNet filters and activations using the shared cube-regression checkpoint.
+	- `filters.png` - generated visualization of first convolution filters.
+	- `activations.png` - generated activation maps for an example image.
 
-The Chapter 2 model is intentionally reused from a separate CNN project that predicts how much of a cube is visible in an image (a regression target in the range [0, 1]).
+## Shared Model Origin (Chapter 2 and Chapter 5)
 
-This chapter focuses on visualizing the optimization landscape (loss surface) for that already trained model, rather than training a new model from scratch in this repository.
+The model/checkpoint used by Chapter 2 and Chapter 5 is intentionally reused from the cube detection project in this repository (`Cube Detection model/`).
+
+The original source repository is:
+
+- https://github.com/Waser2004/Athena-Robot-AI
+
+This model predicts how much of a cube is visible in an image (a regression target in the range [0, 1]).
+
+These chapters focus on analyzing and visualizing behavior of the already trained model, rather than training a new model from scratch in this repository.
 	

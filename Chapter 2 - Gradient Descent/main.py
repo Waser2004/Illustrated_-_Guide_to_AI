@@ -3,6 +3,11 @@ import numpy as np
 import matplotlib.pyplot as plt
 from pathlib import Path
 from collections import OrderedDict
+import sys
+
+SHARED_MODEL_DIR = Path(__file__).resolve().parents[1] / "Cube Detection model"
+if str(SHARED_MODEL_DIR) not in sys.path:
+    sys.path.insert(0, str(SHARED_MODEL_DIR))
 
 from utils import load_image
 from model import build_simple_cnn_regressor
@@ -60,7 +65,7 @@ def normalize_direction(direction, params) -> OrderedDict[str, torch.Tensor]:
 
 def main(num_points=25, alpha_range=(-2.5, 2.5), beta_range=(-2.5, 2.5)):
     # Load the trained model checkpoint
-    checkpoint_path = Path(__file__).resolve().parent / "checkpoint.pt"
+    checkpoint_path = SHARED_MODEL_DIR / "checkpoint.pt"
 
     checkpoint = torch.load(checkpoint_path, map_location=device)
 
@@ -70,7 +75,7 @@ def main(num_points=25, alpha_range=(-2.5, 2.5), beta_range=(-2.5, 2.5)):
 
     # Load the example image
     LABEL = 0.566605
-    image_path = Path(__file__).resolve().parent / "example.png"
+    image_path = SHARED_MODEL_DIR / "example.png"
     image = load_image(image_path, checkpoint)
     image = image.to(device)
 
